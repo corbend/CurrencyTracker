@@ -1,0 +1,51 @@
+<div class="page-header">
+    <h1>Сборщики данных <small></small></h1>
+</div>
+<div class="panel panel-default" ng-controller="collectorFormCtrl">
+    <div class="panel-heading">
+        Создание коллектора
+    </div>
+    <div class="panel-body">
+        <form name="chartForm" novalidate>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    Адрес сбора
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" ng-model="entity.url">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">
+                    Период
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" ng-model="entity.period">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-success" ng-click="save()">
+            Сохранить
+        </button>
+        <button class="btn btn-warning">
+            Отменить
+        </button>
+    </div>
+</div>
+
+<div class="panel panel-default" ng-controller="collectorFormCtrl">
+    <div class="panel-heading">
+        Список
+    </div>
+    <div class="panel-body">
+        <div class="container-fluid">
+            <ul>
+                <li ng-repeat="ch in list track by $index">
+                    {{ch.id}} | {{ch.url}} | {{ch.period}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

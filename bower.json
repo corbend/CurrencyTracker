@@ -1,0 +1,16 @@
+{
+  "name": "slick_base",
+  "version": "0.0.0",
+  "authors": [
+    "alexn <thinkandwin5000@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/public/bower_components",
+    "test",
+    "tests"
+  ]
+}

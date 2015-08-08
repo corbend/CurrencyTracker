@@ -1,0 +1,20 @@
+<div class="page-header">
+    <h1>Данные по валютам <small></small></h1>
+</div>
+
+<div class="panel panel-default" ng-controller="currencyDataCtrl">
+    <div class="panel-heading">
+        Табличные данные
+    </div>
+    <div class="panel-body">
+        <div class="container-fluid">
+            <ul style="list-style: none;" class="container-fluid">
+                <li style="" class="row" ng-repeat="ch in list track by $index">
+                    <span class="col-xs-3">{{ch.currencyName}}|</span>
+                    <span class="col-xs-3">{{ch.dateChanged | date}}|</span>
+                    <span class="col-xs-3">{{ch.value}} </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

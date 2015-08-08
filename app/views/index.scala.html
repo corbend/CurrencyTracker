@@ -1,0 +1,26 @@
+@(message: String, tabLinks: List[String])
+
+@main("") {
+    <div class="container-fluid">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#charts" aria-controls="charts" role="tab" data-toggle="tab">Charts</a></li>
+            <li role="presentation"><a href="#collectors" aria-controls="collectors" role="tab" data-toggle="tab">Collectors</a></li>
+            <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="charts">
+                <ng-include src="'@routes.Assets.versioned("/partials/chartForm.html")'"></ng-include>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="collectors">
+                <ng-include src="'@routes.Assets.versioned("/partials/collectorForm.html")'"></ng-include>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="data">
+                <ng-include src="'@routes.Assets.versioned("/partials/currencyDataForm.html")'"></ng-include>
+            </div>
+        </div>
+    </div>
+}
